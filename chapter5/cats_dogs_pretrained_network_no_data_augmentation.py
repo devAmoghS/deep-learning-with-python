@@ -95,8 +95,8 @@ validation_features, validation_labels = extract_features(validation_dir, 1000)
 test_features, test_labels = extract_features(test_dir, 1000)
 
 train_features = np.reshape(train_features, (2000, 4 * 4 * 512))
-validation_features = np.reshape(validation_features, (2000, 4 * 4 * 512))
-test_features = np.reshape(test_features, (2000, 4 * 4 * 512))
+validation_features = np.reshape(validation_features, (1000, 4 * 4 * 512))
+test_features = np.reshape(test_features, (1000, 4 * 4 * 512))
 
 model = get_model()
 history = train_model(model)
